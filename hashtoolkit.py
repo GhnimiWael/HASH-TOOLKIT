@@ -28,8 +28,6 @@ else:
 
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    #row = soup.select("a[href*=generate-hash/?text=admin123]")
-    #print(row)
     for link in soup.find_all('a'):
         #print(link.get('href'))
         if "/generate-hash/?text=" in link.get('href'):
